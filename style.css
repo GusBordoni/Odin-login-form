@@ -1,6 +1,226 @@
 @import url('https://fonts.cdnfonts.com/css/norse');
+/* font-family: 'Norse', sans-serif; */
+:root {
+    --green-tone: #596D48;
+    --light-border: #E5E7EB;
+    --blue-border: #0004ff;
+    --red-border: #E5E7EB;
+}
 
-p {
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+}
+
+h3 {
+    padding-bottom: 10px;
+}
+
+#logo-side {
+    height: 100vh;
+    flex: 2;
+    background-color: #000;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-top: 15%;
+}
+
+img[src*="leaves"] {
+    opacity: 0.75;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#logo-div {
+    width: 100%;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+#odin-logo {
+    width: 6vw;
+    max-width: 100px;
+    height: auto;
+}
+
+#logo-div > span {
+    color: #FFF;
+    font-size: 6vw;
     font-family: 'Norse', sans-serif;
-    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#form-side {
+    height: 100vh;
+    flex: 5;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 8fr 7fr 8fr;
+}
+
+#form-side > div:nth-child(odd) {
+    width: 100%;
+    background-color: #f9fafb;
+}
+
+.form-div {
+    background-color: #ffffff;
+    padding: 3% 30% 3% 3%;
+    box-shadow: #d5d5d5 6px 4px 10px 0px;
+    z-index: 2;
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    column-gap: 15%;
+}
+
+.input-div > input {
+    width: 100%;
+    min-width: 200px;
+    border-radius: 5px;
+    border: 1px solid var(--light-border);
+    outline: none;
+    padding: 6px 12px;
+    height: 38px;
+    transition: border .25s;
+}
+
+.input-div > input:focus {
+    border: 1px solid var(--blue-border);
+    box-shadow: #d5d5d5 2px 3px 5px 0px;
+}
+
+.pwMissmatch {
+    border-color: var(--red-border) !important;
+}
+
+label {
+    text-wrap: nowrap;
+}
+
+.intro-div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: end;
+    padding: 3%;
+    gap: 10px;
+}
+
+.intro-div > p {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.account-div > p {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.account-div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    padding: 3%;
+    gap: 10px;
+}
+
+.account-btn {
+    padding: 10px 20px;
+    background-color: var(--green-tone);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: #979797 2px 3px 5px 0px;
+}
+
+.account-btn:hover {
+    cursor: pointer;
+    scale: 1.025;
+}
+
+p>a {
+    color: var(--green-tone);
+    font-weight: 600;
+}
+
+p>a:active, p>a:link {
+    text-decoration: none;
+}
+
+#pass-match{
+    font-size: .75rem;
+    color: var(--red-border);
+    visibility: hidden;
+}
+
+
+
+@media only screen and (max-width: 676px) {
+    body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    #logo-side{
+        padding: 10px 0;
+        flex: unset;
+        align-items: center;
+        height: max-content;
+        min-height: 200px;
+    }
+    #odin-logo {
+        min-width: 25%;
+    }
+    #logo-div > span {
+        font-size: 12vw;
+    }
+    #form-side {
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+    }
+    #form-side > div:nth-child(odd) {
+        padding: 5%;
+    }
+    .form-div {
+        padding: 5%;
+    }
+    .intro-div {
+        justify-content: start;
+    }
+    .intro-div > p {
+        font-size: max(1rem, 1vw);
+    }
+    .form-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 5px;
+    }
+    label {
+        font-size: .85rem;
+    }
+    .account-div {
+        height: 100%;
+    }
 }

@@ -6,9 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odin Login Form</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
 </head>
 <body>
-    <div id="left">left</div>
-    <div id="">right</div>
+    <div id="logo-side">
+        <img src="./img/leaves.jpg">
+        <div id="logo-div">
+            <img id="odin-logo" src="./img/odin-lined.png" alt="Odin Logo">
+            <!-- <img id="odin-logo" src="./img/relux_core.png" alt="Odin Logo"> -->
+            <span>Odin</span>
+        </div>
+    </div>
+    <div id="form-side">
+        <div class="intro-div">
+            <p>This is not a real online service! You know you need something like this in your life to help realize your deepest dreams.<br>
+            Sign up <em>now</em> to get started.</p>
+            <br>
+            <p>You <em>know</em> you want to.</p>
+        </div>
+        <div class="form-div">
+            <h3>Let's do this!</h3>
+            <div class="form-container">
+                <div class="input-div">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="fname">
+                </div>
+                <div class="input-div">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lname">
+                </div>
+                <div class="input-div">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="input-div">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" id="phone" name="phone">
+                </div>
+                <div class="input-div">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password">
+                    <span id="pass-match">Passwords don't match.</span>
+                </div>
+                <div class="input-div">
+                    <label for="cpassword">Confirm Password</label>
+                    <input type="password" id="cpassword" name="cpassword">
+                </div>
+            </div>
+        </div>
+        <div class="account-div">
+            <button class="account-btn">Create Account</button>
+            <p>Already have an account? <a href="">Log in.</a></p>
+        </div>
+    </div>
+<script src="./script.js"></script>
 </body>
 </html>
