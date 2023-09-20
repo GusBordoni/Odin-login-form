@@ -7,6 +7,7 @@ logs
 !.vscode/extensions.json
 .idea
 .DS_Store
+.ini
 
 # Folders
 ./assets/imgs/temp/*
