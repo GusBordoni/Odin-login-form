@@ -8,6 +8,7 @@ logs
 .idea
 .DS_Store
 .ini
+desktop.ini
 
 # Folders
 ./assets/imgs/temp/*
